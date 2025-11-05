@@ -1,0 +1,18 @@
+.card{
+    align-items: center;
+    padding:5px;
+    height: 200px;
+    background-color:#8B0000;
+    border-color:#1C1C1C ;
+
+}
+h1{
+    text-align: center;
+    color: white;
+    margin: 30px;
+}
+.btn{
+    align-content: center;
+    margin: 10px;
+    background-color: #D4AF37;
+}
