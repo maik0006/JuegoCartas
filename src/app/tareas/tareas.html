@@ -1,0 +1,18 @@
+<div *ngFor="let tarea of tareasproyecto " [class.complete]="tarea.iscompleted">
+    {{ tarea.name }}
+</div><br>
+
+<ul *ngFor="let instructor of instructores">
+    <li>{{instructor}}</li>
+</ul><br>   
+
+<ol *ngFor="let aprendiz of aprendices">
+    <li>{{aprendiz.nombre}} y su edad es {{aprendiz.edad}} </li>
+</ol><br>
+
+<div *ngFor="let tarea of tareasproyecto " class="task-item">
+    <span [class.complete]="tarea.iscompleted"> {{ tarea.name }} </span>
+    <button (click)=" toggleCompletion( tarea )" class=" btn btn-secondary" >
+        {{ tarea.iscompleted ? 'Deshacer' : 'Completa' }}
+    </button>
+</div>
