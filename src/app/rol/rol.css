@@ -1,0 +1,12 @@
+.container {
+    width: 350px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+h3 {
+    text-align: center;
+    color: #333;
+}

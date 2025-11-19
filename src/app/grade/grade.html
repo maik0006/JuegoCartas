@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <label for="selectGrade">Select a Grade:</label>
+        <select name id="selectGrade" [(ngModel)]="gradeS">
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+            <option value="e">E</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div [ngSwitch]="gradeS">
+            <span *ngSwitchCase="'a'">Excellent!</span>
+            <span *ngSwitchCase="'b'">Great</span>
+            <span *ngSwitchCase="'c'">Ok</span>
+            <span *ngSwitchCase="'d'">Passing</span>
+            <span *ngSwitchCase="'e'">Failed</span>     
+
+        </div>       
+    </div>
+</div>

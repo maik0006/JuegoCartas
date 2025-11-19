@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <input type="text" placeholder="Escriba el nombre de un dia" #inputdia>
+            <button (click)="dia = inputdia.value">Enviar</button>
+        </div>
+        <div class="col">
+            <div [ngSwitch]="dia">
+                <span *ngSwitchCase="'Lunes'">Lunes
+                    <ul>
+                        <li>Este es el horario del lunes</li>
+                        <li>Ivan Malaver 7:00am - 12:00pm</li>
+                        <li>Descanso 12:00pm -1:00pm</li>
+                        <li>Stefi  1:00pm - 6:00pm</li>
+                    </ul>
+                </span>
+                <span *ngSwitchCase="'Martes'">Martes no tenemos clase</span>     
+                <span *ngSwitchCase="'Miercoles'">Miercoles
+                    <ul>
+                        <li>Este es el horario del Miercoles</li>
+                        <li>Stefi  7:00am - 12:00pm</li>
+                    </ul>
+                </span>
+                <span *ngSwitchCase="'Jueves'">Jueves
+                     <ul>
+                        <li>Este es el horario del Jueves</li>
+                        <li>Silia Rubiano 7:00am - 12:00pm</li>
+                        <li>Descanso 12:00pm -1:00pm</li>
+                        <li>Esteban  1:00pm - 6:00pm</li>
+                    </ul>
+                </span>
+                <span *ngSwitchCase="'Viernes'">Viernes
+                    <ul>
+                        <li>Este es el horario del Viernes</li>
+                        <li>Ivan Malaver 1:00pm - 6:00pm</li>
+                    </ul>
+                </span>
+                <span *ngSwitchCase="'Sabado'">Sabado
+                    <ul>
+                        <li>No tenemos clase</li>
+                    </ul>
+                </span>
+                <span *ngSwitchCase="'Domingo'">Domingo
+                    <ul>
+                        <li>No tenemos clase </li>
+                    </ul>
+                </span>
+                <span *ngSwitchDefault>Por favor escriba correctamente el dia</span>
+            </div>
+        </div>
+    </div>
+</div>

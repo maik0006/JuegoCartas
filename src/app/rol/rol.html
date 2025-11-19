@@ -1,0 +1,18 @@
+<h3>Ejercicio3 : Roles</h3>
+<div class="container">
+    <div class="row">
+        <label>Indique su rol</label>
+        <select [(ngModel)]="roles">
+            <option value="admin">Administrador</option>
+            <option value="edit">Editor</option>
+            <option value="lect">Lector</option>
+        </select>
+    </div>
+    <div class="row" [ngSwitch]="roles">
+        <span *ngSwitchCase="'admin'">Tienes acceso a todas las funciones.</span>
+        <span *ngSwitchCase="'edit'">Puedes editar contenido.</span>
+        <span *ngSwitchCase="'lect'">Solo puedes ver contenido.</span>
+        <span *ngSwitchDefault>No se pudo identificar el rol.</span>
+    </div>
+</div>
+<hr>

@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <label for="">Order status:</label>
+        <select class="form-select" id="orderS" [(ngModel)]="status">
+            <option value="Processing">Order: Processing</option>
+            <option value="Delivered">Order: Delivered</option>
+            <option value="Shiped">Order: Shiped</option>
+            <option value="Canceled">Order: Canceled</option>
+        </select>
+    </div>
+    <div class="row">
+        <div [ngSwitch]="status">
+            <div *ngSwitchCase="'Processing'">Your order is begin proccessed</div>
+            <div *ngSwitchCase="'Delivered'">Your order has been delivered</div>
+            <div *ngSwitchCase="'Shiped'">Your order has been Shiped</div>
+            <div *ngSwitchCase="'Canceled'">You order was Cancelled</div>
+        </div>
+
+    </div>
+</div>

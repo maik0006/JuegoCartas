@@ -1,0 +1,16 @@
+<h3>Ejercicio2 : Temperatura</h3>
+<div class="container">
+  <div class="row">
+      <input type="number" placeholder="Ingrese la temperatura °C" #inputemp>
+      <button (click)="temperatura = +inputemp.value; categorizar()">Categorizar</button>
+  </div>
+
+  <div class="row" [ngSwitch]="categoria">
+      <div *ngSwitchCase="'muyfrio'">Hace mucho frío</div>
+      <div *ngSwitchCase="'frio'">Hace frío</div>
+      <div *ngSwitchCase="'templado'">Está templado afuera</div>
+      <div *ngSwitchCase="'caliente'">Está caliente afuera</div>
+      <div *ngSwitchCase="'none'">No se ingresó una temperatura</div>
+  </div>
+</div>
+<hr>

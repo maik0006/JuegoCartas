@@ -1,0 +1,20 @@
+<h3>Ejercicio1 : Planes</h3>
+<div class="container">
+    <div class="row">
+        <label for="planessss">Selecciona uno de los planes</label>
+        <select name id="planessss" [(ngModel)]="Plan">
+            <option value="plan1">Basico</option>
+            <option value="plan2">Estandar</option>
+            <option value="plan3">Premium</option>
+        </select>
+    </div>
+    <div class="row" [ngSwitch]="Plan">
+            <span *ngSwitchCase="'plan1'">Acceso limitado a contenido : $50.000</span>
+            <span *ngSwitchCase="'plan2'">Acceso completo a todo el contenido : $100.000</span>
+            <span *ngSwitchCase="'plan3'"> Acceso completo más contenido exclusivo. $120.000</span>
+            <span *ngSwitchCaseDefault>Seleccione un plan para ver los detalles</span>
+
+        
+    </div>
+</div>
+<hr>
